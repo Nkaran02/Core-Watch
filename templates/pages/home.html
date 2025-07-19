@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="page-wrapper">
+  <main>
+    <h1 class="page-title">System Overview</h1>
+    <div class="cards">
+      <div class="card">CPU Usage: --%</div>
+      <div class="card">Memory Usage: --%</div>
+      <div class="card">Disk Space: --%</div>
+      <div class="card">Cores : --%</div>
+      <div class="card">Threads : --%<div>
+      <div class="card">Uptime: --</div>
+    </div>
+    <canvas id="cpuChart" width="400" height="200"></canvas>
+  </main>
+
+  <nav class="right-sidebar">
+    <ul>
+      <li><a href="{{ url_for('system.home') }}">Home</a></li>
+      <li><a href="{{ url_for('system.battery') }}">Battery</a></li>
+      <li><a href="{{ url_for('system.gpu') }}">GPU</a></li>
+      <li><a href="{{ url_for('system.temperature') }}">Temperature</a></li>
+      <li><a href="{{ url_for('system.trends') }}">Trends</a></li>
+      <li><a href="{{ url_for('system.scientific') }}">Scientific</a></li>
+    </ul>
+  </nav>
+</div>
+{% endblock %}
